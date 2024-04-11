@@ -15,7 +15,7 @@ warnings.filterwarnings("ignore")
 
 # Load the Iris dataset 
 iris = load_iris()
-x,you = iris.data, iris.target
+x,y = iris.data, iris.target
 
 #Logistic Regression as an example model
 model = LogisticRegression()
