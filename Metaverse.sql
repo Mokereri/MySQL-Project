@@ -11,7 +11,7 @@ SELECT
     GROUP BY 
         sending_address;
 
--- Return all fraudulent transactions with the sending addresses
+-- Return all fraudulent transactions with the sending addresses--
 WITH classified_transactions AS (
     SELECT 
         sending_address,
@@ -27,7 +27,7 @@ WITH classified_transactions AS (
         metaverse_transactions_dataset
 )
 
--- Return the top ten fraudulent transactions by amount
+-- Return the top ten fraudulent transactions by amount--
 SELECT 
     sending_address,
     amount,
@@ -40,6 +40,7 @@ WHERE
 ORDER BY 
     amount DESC 
 LIMIT 10;
+
 
 -- Return transactions that are highly risky with their locations
 SELECT 
@@ -64,6 +65,7 @@ GROUP BY
 	anomaly
 ;
 
+
 -- Identifying addresses that are scamming clients 
 SELECT 
 	COUNT(*) AS scams,
@@ -74,7 +76,8 @@ WHERE
 	anomaly = 'high_risk' 
     AND transaction_type = 'scam'
 ;
--- User Behavior Analysis
+
+-- User Behavior Analysis--
 SELECT 
 	purchase_pattern, AVG(session_duration) as average_session_duration,
     login_frequency, AVG(amount) as average_amount
@@ -83,6 +86,7 @@ FROM
 GROUP BY 
 	purchase_pattern,
     login_frequency;
+
 
 -- Geographical Analysis
 SELECT 
