@@ -79,8 +79,10 @@ WHERE
 
 -- User Behavior Analysis--
 SELECT 
-	purchase_pattern, AVG(session_duration) as average_session_duration,
-    login_frequency, AVG(amount) as average_amount
+	purchase_pattern, 
+	AVG(session_duration) as average_session_duration,
+    	login_frequency, 
+	AVG(amount) as average_amount
 FROM 
 	metaverse_transactions_dataset
 GROUP BY 
@@ -88,10 +90,11 @@ GROUP BY
     login_frequency;
 
 
--- Geographical Analysis
+-- Geographical Analysis--
 SELECT 
-	location_region, COUNT(*) as transaction_count,
-    AVG(amount) as average_amount
+	location_region, 
+	COUNT(*) as transaction_count,
+    	AVG(amount) as average_amount
 FROM 
 	metaverse_transactions_dataset
 GROUP BY 
