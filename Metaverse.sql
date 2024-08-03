@@ -100,6 +100,5 @@ FROM
 GROUP BY 
 	location_region;
     
-    -- To be continued--
-	-- To be linked with power BI--
-    -- To see the output just run the queries or navigate to the power BI visualization--
+	-- Linked with power BI--
+    -- Run the queries or navigate to the power BI visualization--
